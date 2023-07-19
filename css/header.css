@@ -1,0 +1,27 @@
+header img {
+  width: 30px;
+  height: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #3a3a3c;
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+
+.header-img-bar {
+  padding: 10px 10px 10px 10px;
+}
+
+.header-icons {
+  padding: 10px 10px 10px 0;
+}
+
+.header-title {
+  font-size: 35px;
+  font-weight: bolder;
+  padding: 15px 0 5px 0;
+  margin-left: 50px;
+}
