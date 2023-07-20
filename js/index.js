@@ -7,9 +7,9 @@ let timer;
 function appStart() {
   const displayGameover = () => {
     const div = document.createElement("div");
-    div.innerText = "게임이 종료 됐습니다";
+    div.innerText = "정답 입니다";
     div.style =
-      "display:flex; justify-content:center; align-items:center; position:absolute; top:40vh; left:38vw; background-color: tomato; width:200px; height:100px;";
+      "display:flex; justify-content:center; align-items:center; position:absolute; top:40vh; left:38vw; background-color: skyblue; width:200px; height:100px; font-size: 20px; border-radius: 15px;";
     document.body.appendChild(div);
   };
   const gameover = () => {
@@ -18,8 +18,22 @@ function appStart() {
     clearInterval(timer);
   };
 
+  const displayGameover_false = () => {
+    const div = document.createElement("div");
+    div.innerText = 정답;
+    div.style =
+      "display:flex; justify-content:center; align-items:center; position:absolute; top:40vh; left:38vw; background-color: aqua; width:200px; height:100px; font-size: 20px; border-radius: 15px;";
+    document.body.appendChild(div);
+  };
+
+  const gameover_false = () => {
+    window.removeEventListener("keydown", handlekeydown);
+    displayGameover_false();
+    clearInterval(timer);
+  };
+
   const nextLine = () => {
-    if (attempts === 6) return gameover();
+    if (attempts === 5) return gameover_false();
     attempts += 1;
     index = 0;
   };
